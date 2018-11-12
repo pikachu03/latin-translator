@@ -1,5 +1,4 @@
 window.onload = function() {
-	// Your JavaScript goes below
 	let submitButton = document.getElementById("submitButton");
 	let word = document.getElementById("word");
 	let wordSearched = document.getElementById("wordSearched");
