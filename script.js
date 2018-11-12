@@ -4,8 +4,19 @@ window.onload = function() {
 	let wordSearched = document.getElementById("wordSearched");
 	let results = document.getElementById("results");
 	let results2 = document.getElementById("results2");
+	let inputBox = document.getElementById("inputBox");
 
 	submitButton.addEventListener("click", () => {
+		translate();
+	});
+
+	inputBox.addEventListener("keypress", (e) => {
+		if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+			translate();
+		}
+	})
+
+	function translate() {
 		let latinWord = inputBox.value;
 		wordSearched.innerText = latinWord;
 
@@ -55,7 +66,5 @@ window.onload = function() {
 				}
 		}
 		});
-
-	});
-
+	}
 }
